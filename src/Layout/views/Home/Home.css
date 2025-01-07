@@ -1,0 +1,12 @@
+#big-button {
+    border-radius: 15px;
+    display: inline-block;
+    margin: 20px auto 70px auto;
+    background-color: #f06236;
+    padding: 3%;
+    font-weight: 700;
+    color: black;
+}
+#big-button:hover {
+    color: white;
+}

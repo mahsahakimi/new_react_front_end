@@ -1,0 +1,58 @@
+.login-wrapper {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.login-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-wrapper label {
+    margin-bottom: 15px;
+}
+
+.login-wrapper label p {
+    margin: 0;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-wrapper input[type="text"],
+.login-wrapper input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-wrapper input[type="text"]:focus,
+.login-wrapper input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-wrapper button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-wrapper button:hover {
+    background-color: #0056b3;
+}

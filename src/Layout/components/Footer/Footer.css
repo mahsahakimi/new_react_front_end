@@ -1,0 +1,21 @@
+footer {
+    background-color: #1f535f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-content {
+    margin-bottom: 20px;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+    color: white;
+}
+.footer-bottom {
+    font-size: 14px;
+}

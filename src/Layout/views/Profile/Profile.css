@@ -1,0 +1,147 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+.profile-card {
+    background: #f5f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    border:2px solid black;
+    color: #1f535f;
+}
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid black;
+    display: block;
+}
+.upload-button {
+    background: #1f535f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.upload-button:hover {
+    background: #0056b3;
+}
+.table-container {
+    flex: 1 1 400px; 
+    background: #f5f4f4;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-x: auto;
+    color: #1f535f;
+    border: 3px solid black;
+}
+.questions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.questions-table th, .questions-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.questions-table th {
+    background-color: #1f535f;
+    color: white;
+}
+.questions-table tr:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+.questions-table tr td a {
+    color: #007BFF;
+}
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.profile-bio {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.profile-stats {
+    display: inline-block;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.stat {
+    text-align: center;
+}
+.stat-number {
+    font-size: 20px;
+    color: #1f535f;
+    margin: 0;
+}
+.stat-label {
+    font-size: 14px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.social-link {
+    text-decoration: none;
+    background: #1f535f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.social-link:hover {
+    background: #0056b3;
+}
+@media (max-width: 600px) {
+    .profile-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .stat-number {
+        font-size: 18px;
+    }
+    .stat-label {
+        font-size: 13px;
+    }
+    .profile-name {
+        font-size: 22px;
+    }
+    .profile-bio {
+        font-size: 15px;
+    }
+}
