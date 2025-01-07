@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Signup.css';
 
 async function signupUser(credentials) {
-  return fetch('http://localhost:8081/signup', {
+  return fetch('http://localhost:8080/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -28,12 +28,13 @@ export default function Signup({ setToken }) {
       type,
       name
     });
-    if (token.message)
-      alert(token.message);
-    else {
-      alert(`You signed up as ${token.username}`);
-      setToken(token);
-    };
+    setToken(token);
+    // if (token.message)
+    //   alert(token.message);
+    // else {
+    //   alert(`You signed up as ${token.username}`);
+    //   setToken(token);
+    // };
   }
 
   return(

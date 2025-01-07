@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Login.css';
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:8081/login', {
+  return fetch('http://localhost:8080/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -25,12 +25,13 @@ export default function Login({ setToken }) {
       password,
       type
     });
-    if (token.message)
-      alert(token.message);
-    else {
-      alert(`You logged in as ${token.username}`);
-      setToken(token);
-    }
+    setToken(token);
+    // if (token.message)
+    //   alert(token.message);
+    // else {
+    //   alert(`You logged in as ${token.username}`);
+    //   setToken(token);
+    // }
   }
 
   return(
