@@ -5,25 +5,25 @@ import AuthContext from '../../contexts/AuthContext';
 
 async function saveProblem(credentials, type, authContext) {
     if (type === 't')
-    return fetch('http://localhost:8081/saveproblem', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
-    })
-      .then(data => data.json())
-
-    else
-    return fetch(`http://localhost:8081/problems/checkproblem/${authContext}`, {
+        return fetch('http://localhost:8081/problems', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
-      })
+        })
         .then(data => data.json())
-   }
+
+    else
+        return fetch(`http://localhost:8081/problems/checkproblem/${authContext}`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })
+            .then(data => data.json())
+    }
 
 function sortTableByQuestionCount() {
     let table = document.getElementById("problemsTable");
@@ -80,7 +80,7 @@ const Problems = ({username, type}) => {
                 .then(response=>response.json())
                 .then(data=>setProblems(data))
         else
-            fetch(`http://localhost:8081/problems/${username}`)
+            fetch(`http://localhost:8081/problems/author/${username}`)
                 .then(response=>response.json())
                 .then(data=>setProblems(data))
     },)
