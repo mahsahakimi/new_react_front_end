@@ -22,7 +22,7 @@ const Teachers = () => {
     useEffect(()=>{
         // console.log("Loading Data ...")
         sortTableByQuestionCount();
-        fetch("http://localhost:8081/teachers")
+        fetch("http://localhost:8080/teachers")
             .then(response=>response.json())
             .then(data=>setTeachers(data))
     },)
