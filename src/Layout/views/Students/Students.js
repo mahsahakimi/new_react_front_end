@@ -22,7 +22,7 @@ const Students = () => {
     useEffect(()=>{
         // console.log("Loading Data ...")
         sortTableByScore();
-        fetch("http://localhost:8081/students")
+        fetch("http://localhost:8080/students")
                 .then(response=>response.json())
                 .then(data=>setStudents(data))
     },)
