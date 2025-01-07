@@ -14,11 +14,11 @@ const Profile = () => {
     useEffect(()=>{
         // console.log("Loading Data ..."
         if (typeContext === 's')
-            fetch(`http://localhost:8081/students/${authContext}`)
+            fetch(`http://localhost:8080/students/${authContext}`)
                     .then(response=>response.json())
                     .then(data=>setPerson(data))
         else
-            fetch(`http://localhost:8081/teachers/${authContext}`)
+            fetch(`http://localhost:8080/teachers/${authContext}`)
                 .then(response=>response.json())
                 .then(data=>setPerson(data))
     },)
