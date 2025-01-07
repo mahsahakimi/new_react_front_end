@@ -5,7 +5,7 @@ import AuthContext from '../../contexts/AuthContext';
 
 async function saveProblem(credentials, type, authContext) {
     if (type === 't')
-        return fetch('http://localhost:8081/problems', {
+        return fetch('http://localhost:8080/problems', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -76,11 +76,15 @@ const Problems = ({username, type}) => {
         // console.log("Loading Data ...")
         sortTableByQuestionCount();
         if (type === 's')
-            fetch(`http://localhost:8081/students/${username}/solved`)
+            fetch(`http://localhost:8080/students/${username}/solved`)
+                .then(response=>response.json())
+                .then(data=>setProblems(data))
+        else if (type === 't')
+            fetch(`http://localhost:8080/problems/author/${username}`)
                 .then(response=>response.json())
                 .then(data=>setProblems(data))
         else
-            fetch(`http://localhost:8081/problems/author/${username}`)
+            fetch(`http://localhost:8080/problems`)
                 .then(response=>response.json())
                 .then(data=>setProblems(data))
     },)
