@@ -7,7 +7,7 @@ const ProblemReaderView = ({title}) => {
 
     useEffect(()=>{
         // console.log("Loading Data ...")
-        fetch(`http://localhost:8081/problems/${title}`)
+        fetch(`http://localhost:8080/problems/${title}`)
             .then(response=>response.json())
             .then(data=>setProblem(data))
     },)
