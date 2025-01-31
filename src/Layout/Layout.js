@@ -17,7 +17,7 @@ import AuthContext from './contexts/AuthContext';
 import TypeContext from './contexts/TypeContext';
 
 const Layout = () => {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState("t");
 
   // unknown people
   if(!token) {

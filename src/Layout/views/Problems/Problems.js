@@ -64,12 +64,11 @@ const Problems = ({username, type}) => {
             Op2,
             Op3,
             Op4,
-            Answer,
-            authContext
+            Answer
         }, type, authContext);
 
-        if (payload.message)
-            alert(payload.message);
+        // if (payload.message)
+        //     alert(payload.message);
     }
 
     useEffect(()=>{
